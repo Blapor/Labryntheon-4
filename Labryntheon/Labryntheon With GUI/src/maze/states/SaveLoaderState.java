@@ -51,7 +51,7 @@ public class SaveLoaderState extends State{
         save8Button = new Button(Color.darkGray, Color.green,width*2/3 - 128, height*3/6, 256,64, "Save 8");
         save9Button = new Button(Color.darkGray, Color.green,width*2/3 - 128, height*4/6, 256,64, "Save 9");
         save10Button = new Button(Color.darkGray, Color.green,width*2/3 - 128, height*5/6, 256,64, "Save 10");
-        backButton = new Button(Color.darkGray, Color.green,width*1/8 - 128, height*1/8, 32,32, "<==");
+        backButton = new Button(Color.darkGray, Color.green,width/32 - 16, height/32, 32,32, "<==");
     }
     
     @Override
@@ -131,7 +131,7 @@ public class SaveLoaderState extends State{
         g.setColor(Color.yellow);
         g.drawString("Choose Save to Load", (width/2) - (g.getFontMetrics().stringWidth("Choose Save to Load") / 2), (height/7) - 32);
         
-        g.setFont(new Font("Book Antiqua", Font.BOLD, 12));
+        g.setFont(new Font("Book Antiqua", Font.BOLD, 14));
         g.setColor(Color.white);
         g.drawString(save1Button.getText(), (width/3) - (g.getFontMetrics().stringWidth(save1Button.getText()) / 2), (height/6 + 32));
         g.drawString(save2Button.getText(), (width/3) - (g.getFontMetrics().stringWidth(save2Button.getText()) / 2), (height*2/6 + 32));
@@ -143,7 +143,7 @@ public class SaveLoaderState extends State{
         g.drawString(save8Button.getText(), (width*2/3) - (g.getFontMetrics().stringWidth(save8Button.getText()) / 2), (height*3/6 + 32));
         g.drawString(save9Button.getText(), (width*2/3) - (g.getFontMetrics().stringWidth(save9Button.getText()) / 2), (height*4/6 + 32));
         g.drawString(save10Button.getText(), (width*2/3) - (g.getFontMetrics().stringWidth(save10Button.getText()) / 2), (height*5/6 + 32));
-        g.drawString(backButton.getText(), (width/8) - (g.getFontMetrics().stringWidth(backButton.getText()) / 2), (height/2 + 32));
+        g.drawString(backButton.getText(), (width/32) - (g.getFontMetrics().stringWidth(backButton.getText()) / 2), (height/32 + 16));
         
     }
 

@@ -39,7 +39,7 @@ public class Main extends Loop{
     public void startup() {
         width = 1080;
         height = 720; 
-        display = new Display("Chasey Atom", width, height);
+        display = new Display("Labryntheon", width, height);
         
         player = new Player();
         
