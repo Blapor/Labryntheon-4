@@ -30,11 +30,11 @@ public class DiffMenuState extends State{
         super(main);
         player = main.getPlayer();
         pc = main.getCharacter();
-        easyButton = new Button(Color.darkGray, Color.green,width/2 - 128, height/5, 256,64, "Easy");
-        mediumButton = new Button(Color.darkGray, Color.green,width/2 - 128, height*2/5, 256,64, "Medium");
-        hardButton = new Button(Color.darkGray, Color.green,width/2 - 128, height*3/5, 256,64, "Hard");
-        MLGButton = new Button(Color.darkGray, Color.green,width/2 - 128, height*4/5, 256,64, "MLG");
-        backButton = new Button(Color.darkGray, Color.green,width/32 - 16, height/32, 32,32, "<==");
+        easyButton = new Button(Color.darkGray, Color.green,width/2 - 128, height/5, 256,64, "Start Game");
+        mediumButton = new Button(Color.darkGray, Color.green,width/2 - 128, height*2/5, 256,64, "Exit Game");
+        hardButton = new Button(Color.darkGray, Color.green,width/2 - 128, height*3/5, 256,64, "Exit Game");
+        MLGButton = new Button(Color.darkGray, Color.green,width/2 - 128, height*4/5, 256,64, "Exit Game");
+        backButton = new Button(Color.darkGray, Color.green,width*1/8 - 128, height*1/8, 32,32, "<==");
     }
     
     @Override
@@ -74,17 +74,17 @@ public class DiffMenuState extends State{
         MLGButton.render(g);
         backButton.render(g);
         
-        g.setFont(new Font("Impact", Font.BOLD, 32));
+        g.setFont(new Font("Comic Sans MS", Font.BOLD, 32));
         g.setColor(Color.yellow);
-        g.drawString("Choose Difficulty", (width/2) - (g.getFontMetrics().stringWidth("Choose Difficulty") / 2), (height/7) - 32);
+        g.drawString("Choose Difficulty", (width/2) - (g.getFontMetrics().stringWidth("Choose Difficulty") / 2), (height/4) - 32);
         
-        g.setFont(new Font("Book Antiqua", Font.BOLD, 12));
+        g.setFont(new Font("Comic Sans MS", Font.BOLD, 12));
         g.setColor(Color.white);
-        g.drawString(easyButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(easyButton.getText()) / 2), (height/5 + 32));
-        g.drawString(mediumButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(mediumButton.getText()) / 2), (height*2/5 + 32));
-        g.drawString(hardButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(hardButton.getText()) / 2), (height*3/5 + 32));
-        g.drawString(MLGButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(MLGButton.getText()) / 2), (height*4/5 + 32));
-        g.drawString(backButton.getText(), (width/32) - (g.getFontMetrics().stringWidth(backButton.getText()) / 2), (height/32 + 16));
+        g.drawString(easyButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(easyButton.getText()) / 2), (height/3 + 32));
+        g.drawString(mediumButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(mediumButton.getText()) / 2), (height/2 + 32));
+        g.drawString(hardButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(hardButton.getText()) / 2), (height/3 + 32));
+        g.drawString(MLGButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(MLGButton.getText()) / 2), (height/3 + 32));
+        g.drawString(backButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(backButton.getText()) / 2), (height/3 + 32));
         
     }
 

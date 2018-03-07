@@ -16,8 +16,6 @@ import maze.Player;
  */
 public class StartMenuState extends State{
     
-    //V1 DONE
-    
     private Button newGameButton;
     private Button loadGameButton;
     private Button settingsButton;
@@ -78,11 +76,11 @@ public class StartMenuState extends State{
         creditsButton.render(g);
         endButton.render(g);
         
-        g.setFont(new Font("Impact", Font.BOLD, 42));
+        g.setFont(new Font("Impact", Font.BOLD, 32));
         g.setColor(Color.yellow);
         g.drawString("LABRYNTHEON", (width/2) - (g.getFontMetrics().stringWidth("LABRYNTHEON") / 2), (height/7) - 32);
         
-        g.setFont(new Font("Book Antiqua", Font.BOLD, 14));
+        g.setFont(new Font("Book Antiqua", Font.BOLD, 12));
         g.setColor(Color.white);
         g.drawString(newGameButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(newGameButton.getText()) / 2), (height/7 + 32));
         g.drawString(loadGameButton.getText(), (width/2) - (g.getFontMetrics().stringWidth(loadGameButton.getText()) / 2), (height*2/7 + 32));
